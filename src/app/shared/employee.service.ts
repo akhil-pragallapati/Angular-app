@@ -11,8 +11,9 @@ export class EmployeeService {
 
   constructor(private fb:FormBuilder, private http: HttpClient) { }
 
-  readonly baseURL = 'http://localhost:3000/api/employees/'
-
+  // readonly baseURL = 'http://localhost:3000/api/employees/'
+  // below is the public Ip from the AWS Ec2 on which its hosted 
+  readonly baseURL = 'http://18.215.180.10:3000/api/employees/'
 list:Employee[] = [];
 
   employeeForm = this.fb.group({
